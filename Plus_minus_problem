@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+void main()
+{
+ int a[10],n,i;
+ float pos_count=0,neg_count=0,zero_count=0;
+ printf("Enter the array size\n");
+ scanf("%d",&n);
+ printf("Enter the array elements\n");
+ for(i=0;i<n;i++)
+  {
+   scanf("%d",&a[i]);
+  }
+ for(i=0;i<n;i++)
+{
+ if(a[i]==0)
+ zero_count++;
+ else if(a[i]>0)
+ pos_count++;
+ else if(a[i]<0)
+ neg_count++;
+}
+ printf("%.6f \n",pos_count/n);
+ printf("%.6f \n",neg_count/n);
+ printf("%.6f \n",zero_count/n);
+}
